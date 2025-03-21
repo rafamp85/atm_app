@@ -1,0 +1,51 @@
+
+.control_center {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    text-align: center;
+    padding-top: 55px;
+    box-sizing: border-box;
+}
+
+.header {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header__img {
+    border-radius: 10%;
+    width: 90%;
+}
+
+.control_center__main {
+    border-top: 15px solid #d7d7d7;
+    margin: -5px 100px;
+    text-align: center;
+    width: 80%;
+    background-color: #fff;
+}
+
+.credit_card {
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.credit_card__img {
+    width: 70%;
+    opacity: 0.2;
+}
+
+.button__line {
+    border-top: solid 3px #d7d7d7;
+    margin-left: -250px;
+    width: 1px;
+    height: 1px;
+}
+
+span {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+}

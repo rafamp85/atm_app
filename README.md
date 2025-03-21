@@ -29,18 +29,25 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# Casetext Homework Assignment
+Your task in this challenge is to build a demo web app that is a functional ATM machine. Please use a stubbed backend as if you were interacting with a server (ie reading from a file or local storage). Feel free to add any bells and whistles you’d like.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Guidelines:
+- Please work in React, using Javascript or Typescript, and utilize any additional frameworks or libraries as needed.
+- Incorporate state management effectively in your application.
+- Utilize React hooks for managing state and side effects.
+- Match the provided mocks as closely as possible.
+- Please use provided assets.
+- A user should be able to check their balance, withdraw funds, and deposit funds after entering their PIN at a minimum.
+- Funds should be correctly reflected after a deposit or withdrawal.
+- A user's card type should be highlighted once they have entered their correct PIN.
+- Please put your code up on your GitHub account.
+- Please include instructions about how we can run your app. (If your solution works better in one browser over the others, let us know which one.)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Optional:
+- While a backend is not required for this assignment, if you feel like it will help you, please create one. You may consider setting up a NodeJS backend server with Express to handle all transactions on the server.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Mocks:
+![Mock 1](assets/Mock_1.png "Mock")
+![Mock 2](assets/Mock_2.png "Mock2")
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
