@@ -50,7 +50,7 @@ export const AtmWithDraw = () => {
 
   return (
     <>
-      <Grid size={6} sx={{display: 'flex', marginRight: 'auto'}}>
+      <Grid size={3} sx={{display: 'flex', marginRight: 'auto'}}>
             <AtmButton variant="contained" size="small" onClick={onSubmit}>.</AtmButton>
             <TextField onChange={(e) => setAmount(parseInt(e.target.value) )} />
             <span>Withdraw</span>

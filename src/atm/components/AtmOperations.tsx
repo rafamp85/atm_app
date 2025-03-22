@@ -10,12 +10,15 @@ export const AtmOperations = () => {
 
   // Use context to get saved data
   const {state} = useUserContext();
-  const {pin, name, balance, funds, cardNumber, error} = state;
+  const {pin, name, balance, funds, error} = state;
     
   useEffect(() => {
     if (pin !== 0) {
         setTitle(`Hi ${name}! Please make a choice...`);
         setSubTitle(`Your balance is ${balance} and your funds are ${funds}`);
+    } else {
+        setTitle('Welcome to the ATM');
+        setSubTitle('');
     }
 
     if (error) {

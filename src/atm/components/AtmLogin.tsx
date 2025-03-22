@@ -10,6 +10,7 @@ import AtmButton from '../pages/AtmButton';
 import { AtmDeposit } from './AtmDeposit';
 import { AtmWithDraw } from './AtmWithDraw';
 import { AtmExit } from './AtmExit';
+import { AtmBalance } from './AtmBalance';
 
 export const AtmLogin = () => {
   const [title, setTitle] = useState('Enter PIN');
@@ -35,6 +36,9 @@ export const AtmLogin = () => {
           userDispatch({type: 'SET_ERROR', payload: ''});
 
           setIsShowOperations(true);
+        } else {
+          setIsShowOperations(false);
+          setTitle('Enter PIN');
         }
       } catch (error) {
         if (axios.isAxiosError(error)) {
@@ -61,16 +65,14 @@ export const AtmLogin = () => {
     if (isShowOperations) {
       return (
         <>
-          <div>
-            <AtmExit />
-          </div>
-          <div>
-            <AtmWithDraw />
-          </div>
-          
-          <div>
+          <Box sx={{display: 'flex'}}>
             <AtmDeposit />
-          </div>
+            <AtmExit />
+          </Box>
+          <Box sx={{display: 'flex'}}>
+            <AtmWithDraw />
+            <AtmBalance />
+          </Box>
         </>
       )
     }
@@ -87,13 +89,16 @@ export const AtmLogin = () => {
       <Grid container spacing={0}>
         {allMovements()}
 
-        <Grid size={4} sx={{display: 'flex', marginLeft: 'auto'}}>
-          <span>{title}</span>
-          <TextField
-            onChange={(e) => setPinValue(parseInt(e.target.value) )}
-          />
-          <AtmButton variant="contained" size="small" onClick={onSubmit}>.</AtmButton>
-        </Grid>
+        <Box sx={{display: 'flex', width: '80%'}}>
+          <Grid size={4} sx={{display: 'flex', marginLeft: 'auto'}}>
+            <span>{title}</span>
+            <TextField
+              onChange={(e) => setPinValue(parseInt(e.target.value) )}
+            />
+            <AtmButton variant="contained" size="small" onClick={onSubmit}>.</AtmButton>
+          </Grid>
+        </Box>
+        
       </Grid>
       </div>
     </Box>

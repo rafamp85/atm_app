@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLoginContext } from '../context/LoginContext';
 import { useUserContext } from '../context/UserContext';
 
-import { Box, TextField } from '@mui/material';
+import { TextField } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 
 import axios from 'axios';
@@ -12,7 +12,7 @@ export const AtmDeposit = () => {
   const [amount, setAmount] = useState(0);
   const [deposit, setDeposit] = useState(0);
 
-  const {state: loginState, dispatch: loginDispatch} = useLoginContext();
+  const {state: loginState} = useLoginContext();
   const {dispatch: userDispatch} = useUserContext();
 
   useEffect(() => {
@@ -49,10 +49,12 @@ export const AtmDeposit = () => {
   };
 
   return (
-    <Grid size={6} sx={{display: 'flex', marginRight: 'auto'}}>
-          <AtmButton variant="contained" size="small" onClick={onSubmit}>.</AtmButton>
-          <TextField onChange={(e) => setAmount(parseInt(e.target.value) )} />
-          <span>Deposit</span>
-    </Grid>
+    <>
+      <Grid size={3} sx={{display: 'flex', marginRight: 'auto'}}>
+            <AtmButton variant="contained" size="small" onClick={onSubmit}>.</AtmButton>
+            <TextField onChange={(e) => setAmount(parseInt(e.target.value) )} />
+            <span>Deposit</span>
+      </Grid>
+    </>
   )
 }

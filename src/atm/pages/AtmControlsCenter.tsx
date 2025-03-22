@@ -21,8 +21,8 @@ export const AtmControlsCenter = () => {
                 <AtmOperations />
             </section>
 
-            <section>
-                <img src={stickerGraf} alt="Sticker" className='' />
+            <section className={styles.footer}>
+                <img src={stickerGraf} alt="Sticker" className={styles.footer__sticker_img} />
                 <img src={systemsImg} alt="systems" className={styles.footer__systems_img} />
             </section>
         </main>

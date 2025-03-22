@@ -43,6 +43,24 @@
     height: 1px;
 }
 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer__sticker_img {
+    position: fixed;
+    top: 39rem;
+}
+
+.footer__systems_img {
+    width: 7rem;
+    height: 30px;
+    margin-left: auto;
+    padding: 5px 24px;
+}
+
 span {
     color: white;
     font-size: 15px;
